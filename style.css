@@ -43,6 +43,7 @@
     width: 101%;
     position: relative;
     overflow: hidden;
+
   }
 
   #ezxwoGFZpUB2 {
@@ -74,7 +75,7 @@
     
   }
   100% {
-    stroke-width: 0;
+    
     
   }
 }
@@ -108,7 +109,7 @@
     stroke-dashoffset: -930;
   }
   100% {
-    stroke-width: 0;
+    
     
   }
 }
