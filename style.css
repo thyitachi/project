@@ -1,135 +1,173 @@
 *, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .half {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 18rem;
-    height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 18rem;
+  height: 18rem;
 }
 
-.loading-page {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-size: 100%;
-    }
+#bg1 {
+  position: absolute;
+  height: 90%;
+  width: 95%;
+  min-width: 50%;
+  min-height: 80%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 4rem;
+  overflow: hidden;
+  background-image: url(https://oasis.opstatics.com/content/dam/oasis/page/ovaltine/oxygenos13/images-ksp-bg-d8384.jpg.webp);
+  background: linear-gradient(180deg,#2647e9 -24.16%,#8ebbe9 88.31%);
+  opacity: 0;
+  }
+
+#bg2{
+  position: absolute;
+  height: 90%;
+  width: 95%;
+  min-width: 50%;
+  min-height: 80%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 4rem;
+  overflow: hidden;
+  background-image: url(https://oasis.opstatics.com/content/dam/oasis/page/ovaltine/oxygenos13/images-ksp-bg-d8384.jpg.webp);
+  background: linear-gradient(180deg,rgba(36,69,233,.42),#e3ad85 95.99%);
+  opacity: 0;
+} 
+
+#bgimg{
+  position: absolute;
+  height: 100vh;
+  width: 95%;
+  min-width: 50%;
+  min-height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 8rem;
+  will-change: width;
+  overflow: hidden;
   
-  #bg1 {
-    position: absolute;
-    min-width: 50%;
-    min-height: 100%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-radius: 8rem;
-    will-change: width;
-  }
-    
-  #ezxwoGFZpUB1 {
-    height: 667px;
-    width: 101%;
-    position: relative;
-    overflow: hidden;
+} 
+/*
+#bg1 {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  min-width: 50%;
+  min-height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 8rem;
+  will-change: width;
+  overflow: hidden;
+  background-color: linear-gradient(180deg,#2647e9 -24.16%,#8ebbe9 88.31%);
 
-  }
-
-  #ezxwoGFZpUB2 {
-    height: 667px;
-    width: 101%;
-    stroke-dasharray: 290 2000;
-    animation: draw 3s ease;
-  }
-  @keyframes draw {
-    0% {
-      stroke-dashoffset: -400;
-      
-    }
-    100% {
-      stroke-dashoffset: -930;
-      
-    }
+}*/
+/*
+.bg1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(https://oasis.opstatics.com/content/dam/oasis/page/ovaltine/oxygenos13/images-ksp-bg-d8384.jpg.webp);
+  background: linear-gradient(180deg,#2647e9 -24.16%,#8ebbe9 88.31%);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #000000;
+}*/
+  
+#ezxwoGFZpUB1 {
+  height: 450px;
+  position: absolute;
+  overflow: hidden;
 }
 
-#ezxwoGFZpUB2 {
-  height: 667px;
-  width: 101%;
-  stroke-dasharray: 1020 1020;
-  animation: draw2 5s ease;
-}
-@keyframes draw2 {
-  0% {
-    stroke-dashoffset: -930;
-    
-  }
-  100% {
-    
-    
-  }
+#ksp-line {
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  
 }
 
-  #ezxwoGFZpUB3 {
-    height: 667px;
-    width: 101%;
-    stroke-dasharray: 290 2000;
-    animation: draw 3s ease;
-  }
 
-  @keyframes draw {
-    0% {
-      stroke-dashoffset: -400;
-    }
-    100% {
-      stroke-dashoffset: -930;
-      
-    }
-}
+.mobile {
+  height: 533px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 1.5rem;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  z-index: 2;
+}  
 
-#ezxwoGFZpUB3 {
-  height: 667px;
-  width: 101%;
-  stroke-dasharray: 1020 1020;
-  animation: draw3 5s ease;
-}
-
-@keyframes draw3 {
-  0% {
-    stroke-dashoffset: -930;
-  }
-  100% {
-    
-    
-  }
-}
 
 section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lefthalf {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 25%;
+  left: 26%;
+  display: block;
+  box-sizing: border-box;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: OnePlus Sans Regular,PingFang SC,Hiragino Sans GB,STHeiti,Microsoft YaHei,WenQuanYi Micro Hei,Helvetica Neue,Helvetica,Arial,sans-serif;
+  line-height:44px;
+  color: #fff;
 }
 
+
+
+
+.righthalf {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 40%;
+  left: 61%;
+  display: block;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: OnePlus Sans Regular,PingFang SC,Hiragino Sans GB,STHeiti,Microsoft YaHei,WenQuanYi Micro Hei,Helvetica Neue,Helvetica,Arial,sans-serif;
+  color: #fff;
+}
+.l1{
+  font-size: 28px;
+  line-height: 30px;
+}
+.l2{
+  font-size: 13.5px;
+  line-height: 16px;
+  margin-top: 20px;
+  width: 18%;
+}
 .bg {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-image: url(/oneplus.webp);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color: #000000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(/image/oneplus.webp);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #000000;
 }
 
 
