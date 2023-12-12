@@ -4,56 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oneplus</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.0/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js" integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js" integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="/style.css" rel="stylesheet" />
 </head>
 <body>
     <div class="bg"></div>
         <section>
             <div class="half">
-                <img src="https://www.oneplus.com/content/dam/oasis/page/common/logo/OnePlus_Logo.png" alt="logo">
+                <img id="logo" src="https://www.oneplus.com/content/dam/oasis/page/common/logo/OnePlus_Logo.png" alt="logo">
             </div>
         </section>
     
-        <section>
+        <section class="animation">
        
-        <div class="loading-page">
-            <img id="bg1" src="https://oasis.opstatics.com/content/dam/oasis/page/ovaltine/oxygenos13/images-ksp-bg-d8384.jpg.webp" alt="bg1">
-            <div class="animation">
-            <svg class="w-101/100 h-101/100 relative" id="ezxwoGFZpUB1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 328 725" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" style="opacity: 1;"> <path id="ezxwoGFZpUB2" d="M51.2,2h225.6c8.994,0,15.619.00156,20.855.42933c5.212.42587,8.871,1.26418,11.965,2.84047c5.645,2.8762,10.234,7.4656,13.11,13.1105c1.576,3.0936,2.415,6.7526,2.841,11.965.427,5.2358.429,11.8609.429,20.8547v622.6c0,8.994-.002,15.619-.429,20.855-.426,5.212-1.265,8.871-2.841,11.965-2.876,5.645-7.465,10.234-13.11,13.11-3.094,1.577-6.753,2.415-11.965,2.841-5.236.427-11.861.429-20.855.429h-225.6c-8.9938,0-15.6189-.002-20.8547-.429-5.2124-.426-8.8714-1.264-11.965-2.841-5.6449-2.876-10.2343-7.465-13.1105-13.11-1.57629-3.094-2.4146-6.753-2.84047-11.965C2.00156,689.419,2,682.794,2,673.8L2,51.2c0-8.9938.00156-15.6189.42933-20.8547.42587-5.2124,1.26418-8.8714,2.84047-11.965C8.14601,12.7354,12.7354,8.14601,18.3803,5.2698c3.0936-1.57629,6.7526-2.4146,11.965-2.84047C35.5811,2.00156,42.2062,2,51.2,2Z" fill="none" stroke="#4281ee" stroke-width="4" stroke-linecap="round" stroke-dashoffset="-400" stroke-dasharray="290 2000"></path> <path id="ezxwoGFZpUB3" d="M51.2,2h225.6c8.994,0,15.619.00156,20.855.42933c5.212.42587,8.871,1.26418,11.965,2.84047c5.645,2.8762,10.234,7.4656,13.11,13.1105c1.576,3.0936,2.415,6.7526,2.841,11.965.427,5.2358.429,11.8609.429,20.8547v622.6c0,8.994-.002,15.619-.429,20.855-.426,5.212-1.265,8.871-2.841,11.965-2.876,5.645-7.465,10.234-13.11,13.11-3.094,1.577-6.753,2.415-11.965,2.841-5.236.427-11.861.429-20.855.429h-225.6c-8.9938,0-15.6189-.002-20.8547-.429-5.2124-.426-8.8714-1.264-11.965-2.841-5.6449-2.876-10.2343-7.465-13.1105-13.11-1.57629-3.094-2.4146-6.753-2.84047-11.965C2.00156,689.419,2,682.794,2,673.8L2,51.2c0-8.9938.00156-15.6189.42933-20.8547.42587-5.2124,1.26418-8.8714,2.84047-11.965C8.14601,12.7354,12.7354,8.14601,18.3803,5.2698c3.0936-1.57629,6.7526-2.4146,11.965-2.84047C35.5811,2.00156,42.2062,2,51.2,2Z" transform="matrix(-1 0 0-1 328.000006 724.999997)" fill="none" stroke="#fd7a47" stroke-width="4" stroke-linecap="round" stroke-dashoffset="-400" stroke-dasharray="290 2000"></path> </svg>
+        <div id="bg1"></div>  
+            <img id="bgimg" src="https://oasis.opstatics.com/content/dam/oasis/page/ovaltine/oxygenos13/images-ksp-bg-1.jpg.webp" alt="">
+        
+        <div id="bg2">
+            <div class="lefthalf">
+            <p>&nbsp&nbspSmooth<br>
+                &nbsp&nbsp&nbsp&nbsp&nbspStable<br>
+            Seamless</p>
         </div>
-        </div>
-   
+        <div class="righthalf">
+            <p class="l1">Elevate your<br>
+                experience
+               </p>
+               <p class="l2">
+                OxygenOS glides like silk with next-gen core stability and enhanced reliability. System-level performance is sublimely smooth with HyperBoost and AI System Booster, elevating mobile gaming while ensuring smooth app opening.
+               </p>
+            </div>
+        </div> 
+
+
+            <img class="mobile" src="https://oasis.opstatics.com/content/dam/oasis/page/ovaltine/oxygenos13/images-ksp-phone-1.png" alt="mobile">
+            <svg class="w-101/100 h-101/100 relative" id="ezxwoGFZpUB1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 328 725" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"> 
+                <path class="path" id="ezxwoGFZpUB2" d="M51.2,2h225.6c8.994,0,15.619.00156,20.855.42933c5.212.42587,8.871,1.26418,11.965,2.84047c5.645,2.8762,10.234,7.4656,13.11,13.1105c1.576,3.0936,2.415,6.7526,2.841,11.965.427,5.2358.429,11.8609.429,20.8547v622.6c0,8.994-.002,15.619-.429,20.855-.426,5.212-1.265,8.871-2.841,11.965-2.876,5.645-7.465,10.234-13.11,13.11-3.094,1.577-6.753,2.415-11.965,2.841-5.236.427-11.861.429-20.855.429h-225.6c-8.9938,0-15.6189-.002-20.8547-.429-5.2124-.426-8.8714-1.264-11.965-2.841-5.6449-2.876-10.2343-7.465-13.1105-13.11-1.57629-3.094-2.4146-6.753-2.84047-11.965C2.00156,689.419,2,682.794,2,673.8L2,51.2c0-8.9938.00156-15.6189.42933-20.8547.42587-5.2124,1.26418-8.8714,2.84047-11.965C8.14601,12.7354,12.7354,8.14601,18.3803,5.2698c3.0936-1.57629,6.7526-2.4146,11.965-2.84047C35.5811,2.00156,42.2062,2,51.2,2Z" fill="none" stroke="#4281ee" stroke-width="4" stroke-linecap="round" stroke-dashoffset="-400" stroke-dasharray="290 2000"></path> 
+                <path class="path" id="ezxwoGFZpUB3" d="M51.2,2h225.6c8.994,0,15.619.00156,20.855.42933c5.212.42587,8.871,1.26418,11.965,2.84047c5.645,2.8762,10.234,7.4656,13.11,13.1105c1.576,3.0936,2.415,6.7526,2.841,11.965.427,5.2358.429,11.8609.429,20.8547v622.6c0,8.994-.002,15.619-.429,20.855-.426,5.212-1.265,8.871-2.841,11.965-2.876,5.645-7.465,10.234-13.11,13.11-3.094,1.577-6.753,2.415-11.965,2.841-5.236.427-11.861.429-20.855.429h-225.6c-8.9938,0-15.6189-.002-20.8547-.429-5.2124-.426-8.8714-1.264-11.965-2.841-5.6449-2.876-10.2343-7.465-13.1105-13.11-1.57629-3.094-2.4146-6.753-2.84047-11.965C2.00156,689.419,2,682.794,2,673.8L2,51.2c0-8.9938.00156-15.6189.42933-20.8547.42587-5.2124,1.26418-8.8714,2.84047-11.965C8.14601,12.7354,12.7354,8.14601,18.3803,5.2698c3.0936-1.57629,6.7526-2.4146,11.965-2.84047C35.5811,2.00156,42.2062,2,51.2,2Z" transform="matrix(-1 0 0-1 328.000006 724.999997)" fill="none" stroke="#fd7a47" stroke-width="4" stroke-linecap="round" stroke-dashoffset="-400" stroke-dasharray="290 2000"></path> </svg>
                 
-    </section>
-    
-    <script>
-        function changeWidth() {
-          var scroll = (window.pageYOffset / 10);
-          var width = scroll;
-           //var width = Math.min(100 - scroll);
-    
-          document.getElementById('bg1').style.width = width + '%';
-        }
-    
-        window.addEventListener('scroll', function(){
-          requestAnimationFrame(changeWidth);
-        })
+                <!--<svg id="ksp-line" class="line2" viewBox="0 0 1840 618" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="pathline" d="M-108 532.5C-108 532.5 52.0001 524.5 106 524.5C402 524.5 462 740.5 696 508.5C930 276.5 1244 138.282 1307 109.5C1370 80.7183 1543 29.5002 1692 10.5008C1841 -8.49862 1948 10.5009 1948 10.5009" stroke="url(#paint0_linear_1095_27984)" stroke-width="4" stroke-linecap="round" stroke-dashoffset="2900" stroke-dasharray="2239.341552734375" style="stroke-dashoffset: 2239.34px;"></path><defs><linearGradient id="paint0_linear_1095_27984" x1="1039.48" y1="12.256" x2="2794.07" y2="0.0944021" gradientUnits="userSpaceOnUse"><stop stop-color="white"></stop><stop offset="1" stop-color="white" stop-opacity="0"></stop></linearGradient></defs></svg>-->   
+                
+                <svg id="ksp-line" class="line2" viewBox="0 0 1840 618" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="pathline" opacity="0.8" d="M-108 532.5C-108 532.5 52.0001 524.5 106 524.5C402 524.5 462 740.5 696 508.5C930 276.5 1244 138.282 1307 109.5C1370 80.7183 1543 29.5002 1692 10.5008C1841 -8.49862 1948 10.5009 1948 10.5009" stroke="url(#paint0_linear_1095_27984)" stroke-width="4" stroke-linecap="round" stroke-dashoffset="2240" stroke-dasharray="2239.341552734375"></path><defs><linearGradient id="paint0_linear_1095_27984" x1="1039.48" y1="12.256" x2="2794.07" y2="0.0944021" gradientUnits="userSpaceOnUse"><stop stop-color="white"></stop><stop offset="1" stop-color="white" stop-opacity="0"></stop></linearGradient></defs></svg>
 
-        const tl = gsap.timeline();
-           
-        gsap.fromTo(
-            ".animation",
-            { opacity: 1 },
-            {
-                opacity: 0,
-                display: "none",
-                duration: 4,
-                delay: 4,
-            }
-            );
+</section>
 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.0/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js" integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js" integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/app.js"></script>
 
-      </script>
 </body>
 </html>
